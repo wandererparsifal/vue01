@@ -6,7 +6,7 @@
       </div>
       <div class="goods-list-desc">
         <p class="goods-list-name">{{ title }}</p>
-        <p class="goods-list-price">{{ price|dTofixed|dCurrency }}</p>  <!-- 这里用到了过滤器货币形式和保留两位小数 -->
+        <p class="goods-list-price">{{ price }}</p>  <!-- 这里用到了过滤器货币形式和保留两位小数 -->
       </div>
     </router-link>
   </li>
