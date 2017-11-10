@@ -22,6 +22,17 @@ const autoOpenBrowser = !!config.dev.autoOpenBrowser
 const proxyTable = config.dev.proxyTable
 
 const app = express()
+
+const appData = require('../mock/goods.json') // 引入根目录下goods.json数据文件
+const goods = appData.goods // goods.json文件文件下的.goods数据赋值给变量goods
+const apiRoutes = express.Router() // 定义express.Router() 对象
+apiRoutes.get('/goods', function (req, res) { // 定义接口并返回数据
+  res.json({
+    data: goods
+  })
+})
+app.use('/api', apiRoutes) // 定义接口在/api目录下，方便管理
+
 const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
