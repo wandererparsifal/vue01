@@ -4,8 +4,8 @@
     <div class="content">
       <ul class="cont-ul">
         <!-- list组件展示区，并用v-for来将数据遍历，:xx="xxx" 是用来给子组件传递数据的 -->
-        <goods-list v-for="item in items" :price="item.price" :title="item.title" :img="item.img"
-                    :key="item.title"></goods-list>
+        <goods-item v-for="item in items" :price="item.price" :title="item.title" :img="item.img"
+                    :key="item.title"></goods-item>
       </ul>
     </div>
     <common-footer></common-footer>
@@ -16,10 +16,10 @@
   import axios from 'axios';
   import HomeHeader from '../components/HomeHeader';
   import CommonFooter from '../components/CommonFooter';
-  import GoodsList from '../components/GoodsList';
+  import GoodsItem from '../components/GoodsItem';
 
   export default {
-    components: { GoodsList, CommonFooter, HomeHeader },
+    components: { GoodsItem, CommonFooter, HomeHeader },
     name: 'HelloWorld',
     data() {
       return {
