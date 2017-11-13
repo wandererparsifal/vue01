@@ -2,7 +2,7 @@
   <li class="goods-item">
     <router-link to="/detail"  class="goods-item-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
       <div class="goods-item-pic">
-           ![](img) <!-- 注意这图片的:src是vue的属性，里面的img是来自该组件的data中数据 -->
+           <img :src="img"/>
       </div>
       <div class="goods-item-desc">
         <p class="goods-item-name">{{ title }}</p>
