@@ -1,6 +1,6 @@
 <template lang="html">
   <li class="goods-item">
-    <router-link to="/detail"  class="goods-item-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
+    <router-link :to="{ name: 'GoodsDetail', params: { imgPath: img }}"  class="goods-item-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
       <div class="goods-item-pic">
            <img :src="img"/>
       </div>

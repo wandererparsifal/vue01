@@ -4,6 +4,7 @@
       <p class="site-title">树懒果园 泰国进口大金煌芒果</p>
       <p class="site-cont">5斤装，约2-4个果，大！！！甜！！！</p>
       <common-footer></common-footer>
+      <img :src="$route.params.imgPath" />
   </div>
 </template>
 
@@ -28,7 +29,7 @@ export default {
   }
   .detail > img {
     display: block;
-    width: 80%;
+    width: 40%;
     margin:  0 auto 0.5rem;
   }
   .detail > p {
